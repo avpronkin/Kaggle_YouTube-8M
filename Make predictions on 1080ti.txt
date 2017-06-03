@@ -1,0 +1,8 @@
+python \
+".\youtube-8m-master\inference.py" \
+--input_data_pattern=".\test\test*.tfrecord" \
+--frame_features=True --feature_names="rgb, audio" --feature_sizes="1024, 128" \
+--checkpoint_file=".\checkpoints\model.ckpt-32408" \
+--train_dir=".\checkpoints" \
+--output_file=".\prediction.csv" \
+--batch_size=1508 --num_readers=4
